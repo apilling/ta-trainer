@@ -27,7 +27,7 @@ export function AddCardModal({visible, setVisible, addCard}:
       <Modal.Body>
       <Form>
         <Form.Group className="mb-3" controlId="addCardForm.promptTextArea">
-          <Form.Label>Prompt</Form.Label>
+          <Form.Label data-testid="prompt-entry-textbox">Prompt</Form.Label>
           <Form.Control as="textarea" rows={3}
             value={prompt}
             onChange={(ev: React.ChangeEvent<HTMLTextAreaElement>) => setPrompt(ev.target.value)}/>
@@ -42,8 +42,8 @@ export function AddCardModal({visible, setVisible, addCard}:
       </Modal.Body>
 
       <Modal.Footer>
-        <Button variant="secondary" onClick={hide}>Close</Button>
-        <Button variant="primary" onClick={saveCard}>Save changes</Button>
+        <Button data-testid="close-button" variant="secondary" onClick={hide}>Close</Button>
+        <Button data-testid="save-changes-button" variant="primary" onClick={saveCard}>Save changes</Button>
       </Modal.Footer>
     </Modal>)
 }

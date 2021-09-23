@@ -8,7 +8,7 @@ export function CardViewer({ card, answerRevealed }:
       <BootstrapCard.Body>
         <BootstrapCard.Title>Card Viewer</BootstrapCard.Title>
         <BootstrapCard.Text>
-          <strong>Prompt</strong>: {card.prompt}
+          <strong >Prompt</strong>: <span data-testid="prompt-label">{card.prompt}</span>
         </BootstrapCard.Text>
         {answerRevealed && <BootstrapCard.Text>
           <strong data-testid="answer-label">Answer</strong>: {card.answer}

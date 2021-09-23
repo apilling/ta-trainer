@@ -15,6 +15,7 @@ function App(): JSX.Element {
   const [deck, setDeck] = useState<Card[]>(CARDS);
 
   function addCard(newCard: Card) {
+    setActiveCard(newCard);
     setDeck([...deck, newCard]);
   }
 

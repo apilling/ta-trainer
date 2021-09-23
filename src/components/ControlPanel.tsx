@@ -58,7 +58,7 @@ export function ControlPanel({ setCard, reveal, answerRevealed, deck, showAddCar
     <Button data-testid="reveal-answer-button" onClick={() => reveal(!answerRevealed)} className="m-4">Reveal Answer</Button>
     <Button onClick={shuffleUsers} className="m-4">Shuffle Users</Button>
     <Button onClick={save} className="m-4" variant="success">Save</Button>
-    <Button onClick={addNewCard} className="m-4">Add new card</Button>
+    <Button data-testid="add-new-card-button" onClick={addNewCard} className="m-4">Add new card</Button>
 
   </Col>
 }
